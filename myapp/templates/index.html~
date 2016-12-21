@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Labdemo Geocoder</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"/>
+    <style>.list-item-name{font-size:14px;margin:0}.search-holder{margin:20px 0;position:relative}.search-holder:before{content:'';position:absolute;width:21px;height:22px;left:15px;top:50%;margin-top:-11px;background:url(https://kaspi.kz/red/static/red/img/search-web.png?ee0ca184566d) no-repeat;z-index:2}.search-input,.tt-menu,.twitter-typeahead{width:100%}.search-input{background:#f2f2f2;color:#a8a8a8;border:1px solid #ddd;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;height:50px;line-height:50px;padding:0 20px 0 50px;font-size:24px;outline:0}.list-item,.tt-no-result{background:#fff;padding:13px 15px}.tt-dataset{background:#fff;border:1px solid #ddd}.tt-menu .list-item{float:none;width:100%;position:relative;border:none;border-bottom:1px solid #ddd}.tt-no-result{border:1px solid #ddd}.list-item{display:block;width:33.3333333%}.tt-cursor,.tt-suggestion:hover{background:#ddd}.tt-suggestion{cursor:pointer;-webkit-transition:top 1s ease-out .5s;-moz-transition:top 1s ease-out .5s;-o-transition:top 1s ease-out .5s;transition:top 1s ease-out .5s}</style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-------------------- GEOCODER CONTAINER -------------------->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="search-holder">
+                        <input type="text"
+                               class="search-input js-search"
+                               placeholder="Введите район, дорогу или город">
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+        <!-------------------- MAP CONTAINER -------------------->
+        <div id="map"></div>
+    </div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+<script type="text/javascript" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#map').css('height', $(window).height() - 80);
+    });
+</script>
+<script type="text/javascript" src="{% static "js/geocoder.js" %}"></script>
+<script type="text/javascript" src="{% static "js/map.js" %}"></script>
+
+</body>
+</html>

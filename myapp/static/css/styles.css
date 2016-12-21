@@ -1,0 +1,88 @@
+.list-item-name{
+    font-size: 14px;
+    margin: 0;
+}
+
+.search-holder{
+    margin: 20px 0;
+    position: relative;
+}
+
+.search-holder:before {
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 22px;
+    left: 15px;
+    top: 50%;
+    margin-top: -11px;
+    background: url(https://kaspi.kz/red/static/red/img/search-web.png?ee0ca184566d) no-repeat;
+    z-index: 2;
+}
+
+.search-input {
+    width: 100%;
+    background: #f2f2f2;
+    color: #a8a8a8;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px 0 50px;
+    font-size: 24px;
+    outline: none;
+}
+
+.twitter-typeahead{
+    width: 100%;
+}
+
+.tt-dataset{
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.tt-menu{
+    width: 100%;
+}
+
+.tt-menu .list-item {
+    float: none;
+    width: 100%;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.tt-no-result{
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 13px 15px;
+}
+
+.list-item {
+    display: block;
+    width: 33.3333333%;
+    background: #fff;
+    padding: 13px 15px;
+}
+
+.tt-cursor{
+    background: #dddddd;
+}
+
+.tt-suggestion{
+    cursor: pointer;
+
+    -webkit-transition: top 1s ease-out 0.5s;
+     -moz-transition: top 1s ease-out 0.5s;
+     -o-transition: top 1s ease-out 0.5s;
+     transition: top 1s ease-out 0.5s;
+     transition: top 1s ease-out 0.5s;
+}
+
+.tt-suggestion:hover{
+    background: #dddddd;
+}
